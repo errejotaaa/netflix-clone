@@ -20,10 +20,6 @@ function Banner() {
     fetchData();
   }, []);
 
-  function truncate(str, n) {
-    return str?.length > n ? str?.subtr(0, n - 1) + "..." : str;
-  }
-
   return (
     <div
       className="banner"

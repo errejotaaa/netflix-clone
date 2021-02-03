@@ -18,7 +18,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
 
   useEffect(() => {
     getData();
-  }, [fetchUrl]);
+  }, [fetchUrl, getData]);
 
   const opts = {
     height: "390",
