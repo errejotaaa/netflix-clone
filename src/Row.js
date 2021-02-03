@@ -10,15 +10,14 @@ function Row({ title, fetchUrl, isLargeRow }) {
   const [movies, setMovies] = useState([]);
   const [trailerUrl, setTrailerUrl] = useState("");
 
-  const getData = async () => {
-    const request = await axios.get(fetchUrl);
-    setMovies(request.data.results);
-    return request;
-  };
-
   useEffect(() => {
+    const getData = async () => {
+      const request = await axios.get(fetchUrl);
+      setMovies(request.data.results);
+      return request;
+    };
     getData();
-  }, [fetchUrl, getData]);
+  }, [fetchUrl]);
 
   const opts = {
     height: "390",
